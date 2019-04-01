@@ -29,5 +29,9 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
   app.get('/pdf',(req,res)=>{
     res.sendFile(__dirname+'/uploads/finalresumae.pdf');
 })
+app.get('/mm',(req,res)=>{
+  res.sendFile(__dirname+'/uploads/rajanresume.jpg');
+})
+
 
 app.listen(PORT);
