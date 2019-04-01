@@ -2,6 +2,7 @@ const express=require('express');
 const multer=require('multer');
 
 const app=express();
+const PORT=process.env.PORT||1478
 app.use('/',express.static(__dirname+'/public'));
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -29,4 +30,4 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
     res.sendFile(__dirname+'/uploads/finalresumae.pdf');
 })
 
-app.listen(1478);
+app.listen(PORT);
